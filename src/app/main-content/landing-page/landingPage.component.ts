@@ -19,4 +19,3 @@ import { NavBarComponent } from "./navBar/nav-bar.component";
 export class LandingPageComponent {
 
 }
-  

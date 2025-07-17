@@ -1,0 +1,45 @@
+// Minimalistisches, verschachteltes SCSS für das Impressum
+:host {
+  display: block;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  font-family: "Raleway", Arial, sans-serif;
+  color: #222;
+  background: #fff;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.01em;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2rem 0 0.7rem 0;
+    color: #444;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.2rem 0 0.5rem 0;
+    color: #555;
+  }
+
+  p {
+    margin: 0 0 1.1rem 0;
+    line-height: 1.7;
+    font-size: 1rem;
+    a {
+      color: #1976d2;
+      text-decoration: underline;
+      transition: color 0.2s;
+      &:hover {
+        color: #0d47a1;
+      }
+    }
+  }
+}
