@@ -7,9 +7,10 @@
   font-family: "Raleway";
 }
 
-.fontRaleway {
-  font-family: "Raleway";
-}
+$dark-red: rgba(187, 2, 2, 0.527);
+$head-line-color: #a00018;
+$font-color: #222;
+
 
 @font-face {
   font-family: "Raleway";
@@ -200,3 +201,5 @@
   font-display: swap;
   src: url("/assets/fonts/Raleway-ThinItalic.ttf") format("truetype");
 }
+
+@import './mixin.scss';

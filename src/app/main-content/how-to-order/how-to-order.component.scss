@@ -1,31 +1,24 @@
+@import './../../../mixin.scss';
+@import './../../../styles.scss';
+
 #howToOrder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include displayFlex(column, center, center);
   padding-bottom: 48px;
 
   h2 {
-    color: #a00018;
-    font-size: 56px;
-    font-weight: 800;
+    @include headline;
     margin: 48px 0 64px 0;
   }
 
   .foodvector {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 120px;
+    @include displayFlex(row, space-evenly, center);
+    width: 100%;
 
     > div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include displayFlex(column, center, center);
 
       img {
-        width: 160px;
-        height: 160px;
+        @include imgResponsive(160px, 160px);
         margin-bottom: 16px;
       }
     }

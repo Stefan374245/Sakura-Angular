@@ -1,25 +1,22 @@
+@import './../../../../mixin.scss';
+@import './../../../../styles.scss';
+
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include displayFlex(row, space-between, center);
   position: absolute;
-  width: calc(100% - 64px);
+  width: 100%;
   top: 0;
   left: 0;
   padding: 32px;
   > img {
-    // child selector for img inside na
-    width: 64px;
-    height: 64px;
+    @include imgResponsive(64px, 64px);
   }
   > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 400px;
+    @include displayFlex(row, flex-end, center, 24px);
+    width: 100%;
     > a {
       &:hover {
-        color: rgba(187, 2, 2, 0.527);
+        color: $dark-red;
       }
     }
   }
@@ -28,22 +25,17 @@ nav {
 a {
   color: wheat;
   text-decoration: none;
-  transition: color 0.3s ease;
+  @include transition(color);
 }
 
 .phone-btn {
-  display: flex;
-  align-items: center;
-  background-color: rgba(187, 2, 2, 0.527);
-  border: solid 1px white;
-  border-radius: 8px;
-  padding: 8px 16px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  @include buttonBase($dark-red, wheat, solid 1px white, 8px, 8px 16px);
+  @include displayFlex(row, center);
   &:hover {
     background-color: wheat;
     border-color: rgba(255, 0, 0, 0.8);
     a {
-      color: rgba(187, 2, 2, 0.527);
+      color: $dark-red;
     }
     img {
       filter: brightness(0) saturate(100%) invert(19%) sepia(97%)
@@ -52,8 +44,7 @@ a {
   }
 
   > img {
-    width: 24px;
-    height: 24px;
+    @include imgResponsive(24px, 24px);
     margin-right: 8px;
   }
 }

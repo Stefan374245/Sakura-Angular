@@ -1,5 +1,8 @@
+@import './../../../mixin.scss';
+@import './../../../styles.scss';
+
 h1, h2 {
-     color: white;
+    @include headline(white, 64px, 800, 2px);
 }
 
 h1 {
@@ -12,10 +15,7 @@ h2 {
 }
 
 section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+   @include displayFlex(column, center, center);
     height: 100vh;
     width: 100%;
     background-image: url('../../../assets/images/1_hero/jpg/hero_bg.jpg');

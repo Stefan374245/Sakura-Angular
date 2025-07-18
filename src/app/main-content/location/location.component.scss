@@ -1,34 +1,28 @@
+@import './../../../mixin.scss';
+@import './../../../styles.scss';
+
 #location {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ @include displayFlex(column, center, center);
   padding: 48px 0;
   background: #fff;
 
   h2 {
-    color: #a00018;
-    font-size: 48px;
-    font-weight: 800;
+    @include headline;
     margin-bottom: 40px;
-    letter-spacing: 2px;
-    text-align: center;
   }
 
   > div {
-    display: flex;
-    align-items: center;
+    @include displayFlex(center);
     margin-bottom: 32px;
 
     p {
-      display: flex;
-      align-items: center;
+      @include displayFlex(center);
       font-size: 28px;
       font-weight: 600;
       color: #222;
 
       .google-maps-marker {
-        width: 36px;
-        height: 36px;
+        @include imgResponsive(36px, 36px);
         margin-right: 16px;
         vertical-align: middle;
       }
@@ -40,7 +34,7 @@
     height: 340px;
     border: none;
     border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    @include boxShadow;
     margin-top: 16px;
   }
 

@@ -1,10 +1,11 @@
+@import './../../../../mixin.scss';
+@import './../../../../styles.scss';
+
 footer {
   background: #111;
   width: 98vw;
   min-height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ @include displayFlex(row, space-between, center);
   padding: 0;
 
   a {
@@ -15,40 +16,32 @@ footer {
       font-size: 16px;
       margin-left: 16px;
       font-weight: 500;
-        transition: color 0.3s ease;
+      @include transition(color);
       &:hover {
-        color: rgba(187, 2, 2, 0.527);
+        color: $dark-red;
       }
     }
   }
 
   .footer-logo {
-    display: flex;
-    align-items: center;
+    @include displayFlex(center);
     padding-left: 40px;
 
     img {
-      height: 64px;
-      width: auto;
-      object-fit: contain;
+      @include imgResponsive(240px, auto);
     }
   }
 
   > div:not(.footer-logo) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include displayFlex(row, center, center);
     gap: 32px;
     margin-right: 40px;
 
     a {
-      display: flex;
-      align-items: center;
+      @include displayFlex(center);
 
       img {
-        height: 40px;
-        width: 40px;
-        object-fit: contain;
+        @include imgResponsive(40px, 40px);
         transition: filter 0.2s;
         &:hover {
           filter: brightness(1.2) drop-shadow(0 0 8px #fff2);
